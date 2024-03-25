@@ -480,7 +480,7 @@ void BinarySearchTree<Key, Value>::insert(const std::pair<const Key, Value> &key
         root_ = newNode;
         return;
     } else {
-        Node<Key, Value>* find = internalFind(keyValuePair.first);
+        Node<Key, Value>* find = internalFind(searchKey);
         Node<Key, Value>* parent = root_;
 
       if (find) {
@@ -506,7 +506,7 @@ void BinarySearchTree<Key, Value>::insert(const std::pair<const Key, Value> &key
                 break;
               }
             }
-          }
+         }
       }
 
     // while (find != NULL) {
